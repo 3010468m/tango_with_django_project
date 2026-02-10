@@ -71,7 +71,7 @@ def add_category(request):
     # handles bad form, new form or no form cases
     return render(request, 'rango/add_category.html', {'form': form})
 
-def add_page(request):
+def add_page(request, category_name_slug):
     try:
         category = Category.objects.get(slug=category_name_slug)
     except Category.DoesNotExist:
@@ -82,7 +82,7 @@ def add_page(request):
 
     form = PageForm()
 
-    if request.method == 'POST'
+    if request.method == 'POST':
         form = PageForm(request.POST)
 
         if form.is_valid():
