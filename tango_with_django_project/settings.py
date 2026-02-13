@@ -118,6 +118,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
 # media variables
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
